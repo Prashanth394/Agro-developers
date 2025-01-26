@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Smart Irrigation System</title>
+    <link rel="stylesheet" href="mp.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e6f7e6; /* Light green background */
+            color: #333;
+        }
+        
+        .card {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9fb;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #388E3C; /* Darker green color for section headings */
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #388E3C; /* Darker green on hover */
+}
+
+.info-box {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #4CAF50; /* Green title color */
+        }
+
+        .card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9fb;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #388E3C; /* Darker green color for section headings */
+        }
+
+        .input-field {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50; /* Green button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #388E3C; /* Darker green on hover */
+        }
+
+        .info-box {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Smart Irrigation System</h1>
+
+        <div class="card">
+            <h2>Location</h2>
+            <div class="input-field">
+                <label for="latitude">Enter Latitude:</label>
+                <input type="text" id="latitude" placeholder="Enter latitude">
+            </div>
+            <div class="input-field">
+                <label for="longitude">Enter Longitude:</label>
+                <input type="text" id="longitude" placeholder="Enter longitude">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Season</h2>
+            <div class="input-field">
+                <label for="season">Select Season:</label>
+                <select id="season">
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </select>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h2>Weather</h2>
+            <div class="input-field">
+                <label for="temperature">Select Temperature (°C):</label>
+                <select id="temperature">
+                    <option value="20">20°C</option>
+                    <option value="25">25°C</option>
+                    <option value="30">30°C</option>
+                    <option value="35">35°C</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="humidity">Select Humidity (%):</label>
+                <select id="humidity">
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                    <option value="80">80%</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="rainExpected">Rain Expected:</label>
+                <select id="rainExpected">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Crop and Field Details</h2>
+            <div class="input-field">
+                <label for="cropType">Select Crop Type:</label>
+                <select id="cropType">
+                    <option value="wheat">Wheat</option>
+                    <option value="corn">Corn</option>
+                    <option value="rice">Rice</option>
+                    <option value="vegetables">Vegetables</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="fieldArea">Field Area (in acres):</label>
+                <input type="text" id="fieldArea" placeholder="Enter field area">
+            </div>
+            <div class="input-field">
+                <label for="growthStage">Crop Growth Stage:</label>
+                <select id="growthStage">
+                    <option value="seeding">Seeding</option>
+                    <option value="vegetative">Vegetative</option>
+                    <option value="flowering">Flowering</option>
+                    <option value="maturity">Maturity</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Soil Moisture and Water Source</h2>
+            <label for="soilMoisture">Soil Moisture Level:</label>
+            <input type="range" id="soilMoisture" min="0" max="100" value="50">
+            <div class="info-box" id="soilInfo">
+                Current Soil Moisture: 50%
+            </div>
+            <div class="input-field">
+                <label for="waterSource">Select Water Source:</label>
+                <select id="waterSource">
+                    <option value="well">Well</option>
+                    <option value="river">River</option>
+                    <option value="rainwater">Rainwater</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Irrigation Preferences</h2>
+            <div class="input-field">
+                <label for="irrigationMethod">Select Irrigation Method:</label>
+                <select id="irrigationMethod">
+                    <option value="drip">Drip Irrigation</option>
+                    <option value="sprinkler">Sprinkler Irrigation</option>
+                    <option value="flood">Flood Irrigation</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="irrigationTime">Preferred Irrigation Time:</label>
+                <select id="irrigationTime">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="fertilizer">Fertilizer Usage (type/amount):</label>
+                <input type="text" id="fertilizer" placeholder="Enter fertilizer details">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Irrigation Recommendation</h2>
+            <div class="info-box" id="recommendation">
+                <!-- Recommendation will appear here -->
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const latitudeInput = document.getElementById("latitude");
+    const longitudeInput = document.getElementById("longitude");
+    const soilMoistureInput = document.getElementById("soilMoisture");
+    const soilInfo = document.getElementById("soilInfo");
+    const recommendationBox = document.getElementById("recommendation");
+    const temperatureSelect = document.getElementById("temperature");
+    const humiditySelect = document.getElementById("humidity");
+    const rainExpectedSelect = document.getElementById("rainExpected");
+    const cropTypeSelect = document.getElementById("cropType");
+    const fieldAreaInput = document.getElementById("fieldArea");
+    const growthStageSelect = document.getElementById("growthStage");
+    const waterSourceSelect = document.getElementById("waterSource");
+    const irrigationMethodSelect = document.getElementById("irrigationMethod");
+    const irrigationTimeSelect = document.getElementById("irrigationTime");
+    const fertilizerInput = document.getElementById("fertilizer");
+
+    // Update the soil moisture info on input change
+    soilMoistureInput.addEventListener("input", () => {
+        const soilMoisture = soilMoistureInput.value;
+        soilInfo.textContent = `Current Soil Moisture: ${soilMoisture}%`;
+    });
+
+    // Function to generate irrigation recommendation
+    function generateRecommendation() {
+        const temperature = temperatureSelect.value;
+        const humidity = humiditySelect.value;
+        const rainExpected = rainExpectedSelect.value;
+        const cropType = cropTypeSelect.value;
+        const fieldArea = fieldAreaInput.value;
+        const growthStage = growthStageSelect.value;
+        const waterSource = waterSourceSelect.value;
+        const irrigationMethod = irrigationMethodSelect.value;
+        const irrigationTime = irrigationTimeSelect.value;
+        const fertilizer = fertilizerInput.value;
+        const soilMoisture = soilMoistureInput.value;
+
+        let recommendation = `For a ${cropType} crop in the ${growthStage} stage on a ${fieldArea} acre field: `;
+        
+        if (rainExpected === "yes") {
+            recommendation += `Since rain is expected, irrigation may not be necessary. `;
+        } else {
+            if (soilMoisture < 40) {
+                recommendation += `Soil moisture is low, consider irrigating using ${irrigationMethod} in the ${irrigationTime}. `;
+            } else {
+                recommendation += `Soil moisture is sufficient, irrigation might not be needed. `;
+            }
+        }
+
+        if (fertilizer) {
+            recommendation += `Apply the following fertilizer: ${fertilizer}. `;
+        }
+
+        recommendationBox.innerHTML = recommendation;
+    }
+
+    // Add an event listener to the form so that the recommendation is updated whenever there's a change in inputs
+    const formInputs = [
+        latitudeInput, longitudeInput, soilMoistureInput, temperatureSelect, humiditySelect, 
+        rainExpectedSelect, cropTypeSelect, fieldAreaInput, growthStageSelect, waterSourceSelect, 
+        irrigationMethodSelect, irrigationTimeSelect, fertilizerInput
+    ];
+
+    formInputs.forEach(input => {
+        input.addEventListener("change", generateRecommendation);
+    });
+});
+
+    </script>
+</body>
+</html>
